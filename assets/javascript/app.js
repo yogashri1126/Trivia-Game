@@ -1,29 +1,32 @@
 $(document).ready(function () {
 
+var counter =0;
+var span;
+var timer;
 //You want the first page to start the game, so you click start the game and another page shows up with the first question
 
 $("#start").on("click", function() {
         //  Set Timer
-        setTimeout(ThirtySeconds, 1000 * 30);
 
+  		
+  		timer= setInterval(function() {
+	    counter=30
+
+	    counter--
+	    if (counter >= 0) {
+	      span = $("#count").html("Time left:" + " " + counter);
+	      console.log(counter)
+	    }
+	    if (counter === 0) {
+	        clearInterval(counter);
+	    }
+	  	}, 1000);
+		
       
-      });
+      	});
 
-function ThirtySeconds(){
-  var counter = 30;
-  setInterval(function() {
-    counter--;
-    if (counter >= 0) {
-      span = document.getElementById("count");
-      span.innerHTML = counter;
-    }
-    if (counter === 0) {
-        alert('sorry, out of time');
-        clearInterval(counter);
-    }
-  }, 1000);
-}
-;
+
+
 
 countRight=0;
 countWrong=0;
