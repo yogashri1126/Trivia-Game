@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-var counter =0;
+var counter =30;
 var span;
 var timer;
 //You want the first page to start the game, so you click start the game and another page shows up with the first question
@@ -10,15 +10,14 @@ $("#start").on("click", function() {
 
   		
   		timer= setInterval(function() {
-	    counter=30
-
-	    counter--
+	   
 	    if (counter >= 0) {
-	      span = $("#count").html("Time left:" + " " + counter);
-	      console.log(counter)
+	    $("#count").html("<h2> Time left:" + " " + counter + "</h2>")
+	    counter--;
 	    }
 	    if (counter === 0) {
-	        clearInterval(counter);
+	        clearInterval(timer);
+	        counter=30;
 	    }
 	  	}, 1000);
 		
