@@ -23,8 +23,17 @@ $("#start").on("click", function() {
 	    }
 	  	}, 1000);
 		
+  		$("#Q1").html("<h2> Where was the first oil well drilled in the United States?</h2>"+
+"<form >"+
+"<input type='radio' name='choice' value='correct'> Titsville, PA"+
+"<input type='radio' name='choice' value='Houston'> Houston, TX"+
+"<input type='radio' name='choice' value='Wilkes-Barre'> Wilkes-Barre, PA"+
+"<input type='radio' name='choice' value='Richmond'> Richmond, VA"+
+"</form>")
       
       	});
+
+
 
 
 countRight=0;
@@ -46,8 +55,6 @@ $("#SubmitOne").on("click", function(){
  			 }
  		countWrong= 11-countRight
     	
-
-alert("You've got" + " "+ countRight + " "+ "correct" + " "+"and"+ " "+ countWrong  + " " + "incorrect!")
 
 });
 
