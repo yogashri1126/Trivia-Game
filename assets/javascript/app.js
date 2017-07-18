@@ -34,14 +34,17 @@ $("#SubmitOne").on("click", function(){
 
   var radios = $('input[name="choice"]');
 
+  console.log(radios)
+
   var val= "";
   for (i = 0, length = radios.length; i < length; i++) {
-      if (radios.value==="correct") {
+  		var check= radios[i]
+      if (check.value==="correct") {
          countRight++ 
        				}
       else{
       	countWrong++
-      }
+      		}
  			 }
     	
     	
@@ -49,7 +52,7 @@ $("#SubmitOne").on("click", function(){
   
   
 
-alert("You've got" + " "+ countRight + " "+ "correct" + " "+"and"+ " "+ countWrong + " " + "incorrect!")
+alert("You've got" + " "+ countRight + " "+ "correct" + " "+"and"+ " "+ 11-countRight + " " + "incorrect!")
 
 });
 
