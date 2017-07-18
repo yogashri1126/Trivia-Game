@@ -32,72 +32,16 @@ countWrong=0;
 
 $("#SubmitOne").on("click", function(){
 
-  var radios = $('.choice');
+  var radios = $('input[name="choice"]');
+
   var val= "";
-  for (var i = 0, length = radios.length; i < length; i++) {
-  	console.log(radios)
-      if (radios[i].checked) {
-         val = radios[i].value; 
-         if (val === "Titusville")
-         { 
-    		countRight++
-    	}
-
-    	console.log(countRight)
-
-    	if(val==="August" ){
-    		countRight++}
-
-    	if(val=== "Right")
-    	{
-    		countRight++
-    	}
-  		
-  		if(val=== "Correct")
-  		{
-  			countRight++
-  		}
-
-  		if(val=== "ExxonMobil")
-  		{
-  			countRight++
-  		}
-
-  		if(val=== "Janeen")
-  		{
-  			countRight++
-  		}
-
-  		if(val=== "Accurate")
-  		{
-  			countRight++
-  		}
-
-  		if(val==="USA")
-  		{
-  			countRight++
-  		}
-
-  		if(val === "Venezuela")
-  		{
-  			countRight++
-  		}
-
-  		if(val === "unconventional")
-  		{
-  			countRight++
-  		}
-
-  		if(val === "Old")
-  		{
-  			countRight++
-  		}
-
-  			else {
-    				countWrong++
-  					}
-        			 
+  for (i = 0, length = radios.length; i < length; i++) {
+      if (radios.value==="correct") {
+         countRight++ 
        				}
+      else{
+      	countWrong++
+      }
  			 }
     	
     	
