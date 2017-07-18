@@ -18,6 +18,8 @@ $("#start").on("click", function() {
 	    if (counter === 0) {
 	        clearInterval(timer);
 	        counter=30;
+	        alert("TIME IS UP!")
+	        location.reload()
 	    }
 	  	}, 1000);
 		
