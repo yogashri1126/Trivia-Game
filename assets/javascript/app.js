@@ -39,20 +39,19 @@ $("#SubmitOne").on("click", function(){
   var val= "";
   for (i = 0, length = radios.length; i < length; i++) {
   		var check= radios[i]
-      if (check.value==="correct") {
+      if (check.checked && check.value==="correct") {
          countRight++ 
        				}
-      else{
-      	countWrong++
-      		}
+      
  			 }
+ 		countWrong= 11-countRight
     	
     	
 
   
   
 
-alert("You've got" + " "+ countRight + " "+ "correct" + " "+"and"+ " "+ 11-countRight + " " + "incorrect!")
+alert("You've got" + " "+ countRight + " "+ "correct" + " "+"and"+ " "+ countWrong  + " " + "incorrect!")
 
 });
 
