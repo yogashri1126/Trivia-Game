@@ -127,22 +127,21 @@ $(document).ready(function() {
 
     
     setTimeout(testing(0), 10 * 1000)
-	setTimeout(testing(1), 10 * 1000)
-	setTimeout(testing(2), 10 * 1000)
+	
     
 
     function testing(i) {
 
     	
 
-        // if (i===trivia.length){
-        // 	var percent = Math.round(countRight / countWrong * 100)
-        //     if (i === trivia.length) {
-        //         $("#Q1").html("You've got" + " " + countRight + " " + "right and" + " " + countWrong + " " + "wrong" + "<br>")
-        //     }
-        // 	} 
+        if (i===trivia.length){
+        	var percent = Math.round(countRight / countWrong * 100)
+            if (i === trivia.length) {
+                $("#Q1").html("You've got" + " " + countRight + " " + "right and" + " " + countWrong + " " + "wrong" + "<br>")
+            }
+        	} 
 
-        // else { 
+        else { 
         
         console.log(i)
         console.log(trivia[i])
@@ -179,11 +178,11 @@ $(document).ready(function() {
             console.log(i)
             
            
-            //testing(i+1)
+            testing(i+1)
 
         })
 
-    //}
+    }
 
     
 
