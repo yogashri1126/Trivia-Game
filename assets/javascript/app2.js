@@ -36,9 +36,16 @@ $(document).ready(function() {
 
             }
 
-            // var Question4= {
+            var Question4= {
 
-            //}
+            	query: "<h2> What are the Seven Sisters</h2>",
+                correct: "Anglo-Iranian Oil, Company (now BP), Gulf Oil (later part of Chevron), Royal Dutch Shell, Standard Oil Company of California (SoCal, now Chevron), Standard Oil Company of New Jersey (Esso, later Exxon), Standard Oil Company of New York (Socony, later Mobil, now part of ExxonMobil), Texaco (later merged into Chevron)",
+                wrong1: "Anglo-Iranian Oil, Company (now BP), Gulf Oil (later part of Chevron), Royal Dutch Shell, Standard Oil Company of California (SoCal, now Chevron), Standard Oil Company of New Jersey (Esso, later Exxon), Standard Oil Company of New York (Socony, later Mobil, now part of ExxonMobil), Standard Oil of Ohio (later Conoco)",
+                wrong2: "Anglo-Iranian Oil, Company (now BP), Gulf Oil (later part of Chevron), Royal Dutch Shell, ConocoPhillips, Standard Oil Company of New Jersey (Esso, later Exxon), Standard Oil Company of New York (Socony, later Mobil, now part of ExxonMobil), Texaco (later merged into Chevron)",
+                wrong3: "Elf (now TOTAL), Gulf Oil (later part of Chevron), Royal Dutch Shell, Standard Oil Company of California (SoCal, now Chevron), Standard Oil Company of New Jersey (Esso, later Exxon), Standard Oil Company of New York (Socony, later Mobil, now part of ExxonMobil), Texaco (later merged into Chevron)",
+                img: "<img src='images/sisters.png'>"
+
+            }
 
             // var Question5= {
 
@@ -68,7 +75,7 @@ $(document).ready(function() {
 
             //}
 
-            var trivia = [Question1, Question2, Question3]
+            var trivia = [Question1, Question2, Question3, Question4]
                 // , Question2, Question3, Question4, Question5, Question6, Question7, Question8, Question9, Question10, Question11]
             var rights = [Question1.correct, Question2.correct, Question3.correct]
             console.log(Question1)
@@ -148,7 +155,7 @@ $(document).ready(function() {
                             $("#Q1").html("You've got" + " " + countRight + " " + "right and" + " " + countWrong + " " + "wrong" + "<br>")
                         	clearInterval(timer)
                         }
-                    } else {
+                    } 
 
                         console.log(i)
                         console.log(trivia[i])
@@ -177,18 +184,21 @@ $(document).ready(function() {
                             if (check[save].checked === true && nice === "correct") {
 
                                 countRight++
-
+                                
 
 
                                 $("#Q1").html("You are correct! The answer is" + " " + trivia[i].correct + "<br>" + trivia[i].img).delay(2000)
-
+                                return
                                 console.log(countRight)
+                                
 
 
-                            } else {
+                            } 
+                            else {
                                 countWrong++
+                                
                                 $("#Q1").html("INCORRECT! The answer is" + " " + trivia[i].correct + "<br>" + trivia[i].img)
-
+                                return
                             }
 
 
@@ -196,7 +206,7 @@ $(document).ready(function() {
                             console.log(i)
 
                         })
-                    }
+                    
 
 
 
