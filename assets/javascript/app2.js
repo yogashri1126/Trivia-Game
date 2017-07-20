@@ -139,14 +139,6 @@ $(document).ready(function() {
                 // }
 
 
-
-
-
-
-                
-
-
-
                 function testing(i) {
 
                     if (i === trivia.length) {
@@ -183,22 +175,21 @@ $(document).ready(function() {
 
                             if (check[save].checked === true && nice === "correct") {
 
-                                countRight++
-                                
-
-
+          
                                 $("#Q1").html("You are correct! The answer is" + " " + trivia[i].correct + "<br>" + trivia[i].img).delay(2000)
+                                countRight++
                                 return
                                 console.log(countRight)
                                 
 
 
                             } 
-                            else {
-                                countWrong++
+                             else{
+                                
                                 
                                 $("#Q1").html("INCORRECT! The answer is" + " " + trivia[i].correct + "<br>" + trivia[i].img)
-                                return
+                               	countWrong++
+                               	return
                             }
 
 
